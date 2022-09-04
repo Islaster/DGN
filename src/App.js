@@ -1,12 +1,14 @@
 import "./App.css";
-import { Routes, Route, NavLink } from "react-router-dom";
-import { useState } from "react";
+import DGN from "./Pages/DGN/DGN";
+import { history } from "./helpers/history";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const [change, setChange] = useState(true);
   return (
     <div className="App">
-      <Routes></Routes>
+      <Routes>
+        <Route path="/play" element={<DGN />} />
+      </Routes>
       <h3>Welcome To The Duegeon</h3>
     </div>
   );
