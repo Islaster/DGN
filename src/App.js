@@ -1,6 +1,6 @@
 import "./App.css";
 import DGN from "./Pages/DGN/DGN";
-import { history } from "./helpers/history";
+
 import { Routes, Route } from "react-router-dom";
 
 function App() {
