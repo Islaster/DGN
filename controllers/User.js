@@ -16,8 +16,10 @@ function checkToken(req, res) {
 
 async function login(req, res) {
   try {
+    //find user
     const user = await User.findOne({ username: req.body.username });
     if (!user) throw new Error();
+    //checking if password matches
     const match = await bcrypt.compare(req.body.password, user.password);
     if (!match) throw new Error();
     res.json(createJWT(user));
@@ -28,10 +30,6 @@ async function login(req, res) {
 
 async function create(req, res) {
   try {
-    req.body.role = {
-      role: req.body.role,
-      permissions: {},
-    };
     //add user to the database
     const user = await User.create(req.body);
     // token will be a string

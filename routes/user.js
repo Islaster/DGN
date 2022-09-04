@@ -6,4 +6,5 @@ router.post("/", userCtrl.create);
 router.post("/login", userCtrl.login);
 
 router.get("/check-token", userCtrl.checkToken);
+
 router.put("/user   ", userCtrl.edit);
