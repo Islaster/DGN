@@ -1,4 +1,5 @@
 import { Component } from "react";
+
 // Add this import
 import { signUp } from "./user-service";
 export default class SignUpForm extends Component {
@@ -27,7 +28,7 @@ export default class SignUpForm extends Component {
       const user = await signUp(formData);
       // Baby step!
       this.props.setUser(user);
-      this.props.navigate("/");
+      this.props.navigate("/play");
     } catch {
       // An error occurred
       this.setState({ error: "Sign Up Failed - Try Again" });

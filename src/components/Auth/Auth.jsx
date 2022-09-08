@@ -1,9 +1,11 @@
 import { useState } from "react";
 import LoginForm from "../../utilities/LoginForm";
 import SignUpForm from "../../utilities/SignUpForm";
+import { useNavigate } from "react-router-dom";
 
 export default function Auth({ user, setUser }) {
   const [showSignUp, setShowSignUp] = useState(false);
+  const navigate = useNavigate();
   return (
     <>
       <div className="switch">
@@ -19,7 +21,7 @@ export default function Auth({ user, setUser }) {
         </label>
       </div>
       {showSignUp ? (
-        <SignUpForm setUser={setUser} />
+        <SignUpForm setUser={setUser} navigate={navigate} />
       ) : (
         <LoginForm setUser={setUser} />
       )}

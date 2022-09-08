@@ -25,9 +25,9 @@ export default function LoginForm({ setUser }) {
       setUser(user);
 
       if (user.role === "admin") {
-        navigate("/admin");
+        navigate("/play");
       } else {
-        navigate("/guest");
+        navigate("/");
       }
     } catch (err) {
       setError("Log In Failed - Try Again");
@@ -38,7 +38,7 @@ export default function LoginForm({ setUser }) {
     <div>
       <div className="form-container" onSubmit={handleSubmit}>
         <form autoComplete="off">
-          <label>Email</label>
+          <label>Username</label>
           <input
             type="text"
             name="username"
