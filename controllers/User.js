@@ -43,23 +43,18 @@ async function create(req, res) {
     res.status(400).json(e);
   }
 }
-const filter = { "User._id": req.params.id };
-const update = function (user) {
-  user.name = req.body.name;
-  user.email = req.body.email;
-  user.username = req.body.username;
-  user.save(() => {
-    res.json(user);
-  });
-};
 
-async function edit(req, res) {
+function edit(req, res) {
+  const filter = { "User._id": req.params.id };
+  const update = function (user) {
+    user.name = req.body.name;
+    user.email = req.body.email;
+    user.username = req.body.username;
+    user.save(() => {
+      res.json(user);
+    });
+  };
   User.findOneAndUpdate(filter, update, { new: true });
-  try {
-  } catch (e) {
-    console.log(e);
-    res.status(400);
-  }
 }
 /*-- Helper Functions --*/
 
