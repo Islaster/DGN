@@ -11,7 +11,7 @@ export default function Landing() {
           Y
         </Link>
         /
-        <Link to="/" className="N">
+        <Link to="/" className="N" onClick={window.close}>
           N
         </Link>
         ]
