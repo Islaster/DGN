@@ -1,19 +1,19 @@
 import "./App.css";
-import DGN from "./Pages/DGN/DGN";
 import { useState } from "react";
-import { getUser } from "./utilities/user-service";
+
 import { Routes, Route } from "react-router-dom";
-import Auth from "./components/Auth/Auth";
+//PAGES
+import Landing from "./Pages/Landing/Landing";
+import DGN from "./Pages/DGN/DGN";
 function App() {
-  const [user, setUser] = useState(getUser());
+  const [user, setUser] = useState();
 
   return (
     <div className="App">
       <Routes>
+        <Route path="/" element={<Landing />} />
         <Route path="/play" element={<DGN />} />
       </Routes>
-      <h3>Welcome To The Duegeon</h3>
-      <Auth user={user} setUser={setUser} />
     </div>
   );
 }

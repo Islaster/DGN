@@ -1,3 +1,3 @@
 export default function DGN() {
-  return <></>;
+  return <h1>DGN</h1>;
 }

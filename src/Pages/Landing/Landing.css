@@ -1,0 +1,12 @@
+.Y,
+.N {
+  text-decoration: none;
+  color: white;
+}
+
+.N:hover {
+  color: red;
+}
+.Y:hover {
+  color: green;
+}
