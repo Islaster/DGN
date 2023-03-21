@@ -5,9 +5,8 @@ import { Routes, Route } from "react-router-dom";
 //PAGES
 import Landing from "./Pages/Landing/Landing";
 import DGN from "./Pages/DGN/DGN";
-function App() {
-  const [user, setUser] = useState();
 
+function App() {
   return (
     <div className="App">
       <Routes>

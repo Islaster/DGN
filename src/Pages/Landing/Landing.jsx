@@ -4,7 +4,7 @@ import "./Landing.css";
 export default function Landing() {
   return (
     <section>
-      <h1>Would you like to Enter the Dungeon</h1>
+      <h1>Would You Like To Enter The Dungeon?</h1>
       <h3>
         [
         <Link to="/play" className="Y">
